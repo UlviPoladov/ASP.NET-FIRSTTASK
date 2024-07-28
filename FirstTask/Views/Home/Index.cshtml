@@ -1,0 +1,89 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="~/css/drinks.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drinks Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Liter</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var drink in Model.Drinkv)
+                {
+                    <tr>
+                        <td>@drink.Id</td>
+                        <td>@drink.Name</td>
+                        <td>@drink.Description</td>
+                        <td>@drink.Price.ToString("C")</td>
+                        <td>@drink.Ltr</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h1>FastFood Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var fastFood in Model.FastFoodv)
+                {
+                    <tr>
+                        <td>@fastFood.Id</td>
+                        <td>@fastFood.Name</td>
+                        <td>@fastFood.Description</td>
+                        <td>@fastFood.Price.ToString("C")</td>
+                        <td>@fastFood.Time</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h1>Hot Meal Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var hotMeal in Model.HotMealv)
+                {
+                    <tr>
+                        <td>@hotMeal.Id</td>
+                        <td>@hotMeal.Name</td>
+                        <td>@hotMeal.Description</td>
+                        <td>@hotMeal.Price.ToString("C")</td>
+                        <td>@hotMeal.Degre</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
